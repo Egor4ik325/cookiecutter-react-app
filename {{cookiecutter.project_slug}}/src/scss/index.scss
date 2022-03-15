@@ -1,0 +1,8 @@
+@import "./base";
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $gray-100;
+}
