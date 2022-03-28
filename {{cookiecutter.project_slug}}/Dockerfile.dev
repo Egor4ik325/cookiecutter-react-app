@@ -1,0 +1,12 @@
+FROM node:16-bullseye
+
+WORKDIR /app
+
+COPY ./package.json ./package.json
+COPY ./package-lock.json ./package-lock.json
+
+RUN npm install --force && npm cache clean --force
+
+COPY . .
+
+ENV PATH ./node_modules/.bin/:$PATH

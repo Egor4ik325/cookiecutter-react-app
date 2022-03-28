@@ -2,7 +2,20 @@
 
 ## Setup
 
+```sh
+npm install
+npm start
+```
+
 ## Upgrade
+
+```sh
+# Check packages version upgrades
+npx npm-check-updates
+
+# Perform Upgrade
+npx npm-check-updates -u
+```
 
 ## Build production
 

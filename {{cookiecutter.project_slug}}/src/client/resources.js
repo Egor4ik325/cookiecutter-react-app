@@ -12,7 +12,9 @@ export class Authentication extends Resource {
 
   async register() {}
 
-  async user() {}
+  async user() {
+    return null;
+  }
 
   async logout() {}
 }

@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect, useContext } from "react";
-import client from "../client";
-import { NotAuthenticatedError } from "../client/errors";
+import client from "../client/client";
+import { NotAuthenticatedError } from "../client.errors";
 
 const AuthContext = createContext();
 
@@ -45,11 +45,9 @@ export function AuthProvider({ children }) {
     });
   };
 
-  return (
-    <AuthContext.Provider value={{ user, login, logout, register, update }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  const auth = { user, login, logout, register, update };
+
+  return <AuthContext.Provider value={auth}>{children}</AuthContext.Provider>;
 }
 
 export const useAuth = () => useContext(AuthContext);

@@ -5,7 +5,7 @@ API).
 
 ## Features
 
-- directory structure
+- **directory file structure**
 - routing
 - render error handling
 - authentication base

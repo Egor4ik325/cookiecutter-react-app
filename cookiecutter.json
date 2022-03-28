@@ -1,4 +1,4 @@
 {
   "project_name": "Super single-page app",
-  "project_slug": "app"
+  "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '-')|replace('_', '-')|replace('.', '-')|trim() }}"
 }

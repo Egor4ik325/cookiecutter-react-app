@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Authentication } from "./resources";
 
-export default class ApiClient {
+class ApiClient {
   constructor() {
     const instance = axios.create();
     instance.interceptors.request.use(_requestInterceptor, null);
@@ -18,3 +18,6 @@ function _requestInterceptor(config) {
 async function _responseRejectedInterceptor(error) {
   return Promise.reject(error);
 }
+
+const client = new ApiClient();
+export default client;
